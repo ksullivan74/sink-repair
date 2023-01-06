@@ -5,7 +5,8 @@ import { SinkRepair } from "./SinkRepair.js"
 const mainContainer = document.querySelector("#container")
 
 const render = () => {
-    fetchRequests().then(
+    fetchRequests()
+    .then(
         () => {
         mainContainer.innerHTML = SinkRepair()
         }
@@ -13,3 +14,11 @@ const render = () => {
 }
 
 render()
+
+
+mainContainer.addEventListener(
+    "statechanged",
+    CustomEvent => {
+        render()
+    }
+)

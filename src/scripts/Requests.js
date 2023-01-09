@@ -53,8 +53,8 @@ mainContainer.addEventListener(
                    2. plumberId
                    3. date_created
             */
-            const  selectedRequest = requestId 
-            const  selectedPlumber = plumberId
+            const  selectedRequest = parseInt(requestId)
+            const  selectedPlumber = parseInt(plumberId)
             const  date_completed = Date.now()
                            
 
@@ -68,7 +68,7 @@ mainContainer.addEventListener(
                 to the `completions` resource for your API. Send the
                 completion object as a parameter.
              */
-            sendCompletion()
+            sendCompletion(completions)
         }
     }
 )
